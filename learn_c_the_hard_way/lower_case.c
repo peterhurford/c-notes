@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
@@ -7,8 +8,8 @@ int main(int argc, char *argv[]) {
   }
 
   int i = 0;
-  for(i = 0; argv[1][i] != "\0"; i++) {
+  for(i = 0; argv[1][i] != '\0'; i++) {
     char letter = argv[1][i];
-    printf("%c", letter);
+    printf("%c", tolower(letter));
   }
 }
